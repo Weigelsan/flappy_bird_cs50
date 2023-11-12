@@ -1,0 +1,480 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://Kenney Blocks.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Menu.gd" type="Script" id=2]
+[ext_resource path="res://right.png" type="Texture" id=3]
+
+[sub_resource type="Theme" id=14]
+
+[sub_resource type="StyleBoxFlat" id=15]
+content_margin_top = 50.0
+bg_color = Color( 0.670588, 0.560784, 0.427451, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.796078, 0.72549, 0.847059, 1 )
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="DynamicFont" id=6]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=7]
+default_font = SubResource( 6 )
+
+[sub_resource type="DynamicFont" id=20]
+size = 28
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=21]
+default_font = SubResource( 20 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 27
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=11]
+default_font = SubResource( 10 )
+
+[sub_resource type="Theme" id=22]
+default_font = SubResource( 20 )
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 0.105882, 0.698039, 0, 1 )
+skew = Vector2( 0.25, 0 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_color = Color( 0.14902, 0.14902, 0.14902, 0.6 )
+shadow_size = 10
+shadow_offset = Vector2( 5, 5 )
+
+[sub_resource type="StyleBoxFlat" id=17]
+bg_color = Color( 0.105882, 0.698039, 0, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 11.0
+shadow_color = Color( 0.14902, 0.14902, 0.14902, 0.6 )
+shadow_size = 10
+shadow_offset = Vector2( 5, 5 )
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.2, 0.698039, 0, 1 )
+skew = Vector2( 0.25, 0 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 1, 1, 1, 1 )
+border_blend = true
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="DynamicFont" id=12]
+size = 25
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=13]
+default_font = SubResource( 12 )
+Button/styles/hover = SubResource( 16 )
+Button/styles/normal = SubResource( 17 )
+Button/styles/pressed = SubResource( 18 )
+
+[sub_resource type="DynamicFont" id=27]
+size = 60
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=28]
+default_font = SubResource( 27 )
+
+[sub_resource type="Animation" id=23]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("PanelContainer:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 235.5, 161 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Label:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Label:rect_rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Label:rect_scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Label:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=26]
+resource_name = "blend_in"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "slide_in"
+length = 0.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("PanelContainer:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 0.5, 0.5 ),
+"update": 0,
+"values": [ Vector2( 235.5, 641 ), Vector2( 235.5, 124 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Label:rect_rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 0.5 ),
+"update": 0,
+"values": [ 0.0, 1416.5 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Label:rect_scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 0.5 ),
+"update": 0,
+"values": [ Vector2( 10, 10 ), Vector2( 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Label:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 0.5 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Label:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 105, 121 ), Vector2( 105, 67 ) ]
+}
+
+[sub_resource type="Animation" id=29]
+resource_name = "slide_out"
+length = 0.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("PanelContainer:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 0.5 ),
+"update": 0,
+"values": [ Vector2( 235.5, 124 ), Vector2( 267.5, 658 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Label:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 105, 67 ), Vector2( 105, 603 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ColorRect:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[node name="Menu" type="CanvasLayer"]
+pause_mode = 2
+layer = 2
+visible = false
+script = ExtResource( 2 )
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 235.5
+margin_top = 161.0
+margin_right = 724.5
+margin_bottom = 492.0
+theme = SubResource( 14 )
+custom_styles/panel = SubResource( 15 )
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+margin_left = 10.0
+margin_top = 50.0
+margin_right = 479.0
+margin_bottom = 321.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+margin_right = 469.0
+margin_bottom = 271.0
+
+[node name="GameOverLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
+margin_right = 469.0
+margin_bottom = 76.0
+theme = SubResource( 7 )
+text = "Game Over"
+align = 1
+
+[node name="HBoxScoreLabel" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+margin_right = 469.0
+margin_bottom = 42.0
+
+[node name="YourScoreLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxScoreLabel"]
+margin_right = 232.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+theme = SubResource( 21 )
+text = "Your Score"
+align = 1
+
+[node name="HighscoreLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxScoreLabel"]
+margin_left = 236.0
+margin_right = 469.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
+theme = SubResource( 11 )
+text = "Highscore"
+align = 1
+
+[node name="HBoxScoreNumbers" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+margin_top = 46.0
+margin_right = 469.0
+margin_bottom = 88.0
+
+[node name="Score_num" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxScoreNumbers"]
+margin_right = 232.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+theme = SubResource( 22 )
+text = "0"
+align = 1
+
+[node name="Highscore_num" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxScoreNumbers"]
+margin_left = 236.0
+margin_right = 469.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
+theme = SubResource( 11 )
+text = "0"
+align = 1
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBoxContainer"]
+margin_top = 92.0
+margin_right = 469.0
+margin_bottom = 134.0
+custom_constants/separation = 42
+custom_styles/separator = SubResource( 19 )
+
+[node name="RetryButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+margin_left = 159.0
+margin_top = 138.0
+margin_right = 309.0
+margin_bottom = 238.0
+rect_min_size = Vector2( 150, 100 )
+focus_mode = 0
+size_flags_horizontal = 4
+size_flags_stretch_ratio = 8.71
+theme = SubResource( 13 )
+keep_pressed_outside = true
+icon = ExtResource( 3 )
+clip_text = true
+icon_align = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="."]
+margin_right = 394.0
+margin_bottom = 90.0004
+rect_pivot_offset = Vector2( 197, 45 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = SubResource( 28 )
+text = "Game Over"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 23 )
+anims/blend_in = SubResource( 26 )
+anims/slide_in = SubResource( 24 )
+anims/slide_out = SubResource( 29 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0 )
+
+[node name="TimerMenuShow" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/RetryButton" to="." method="_on_RetryButton_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="TimerMenuShow" to="." method="_on_TimerMenuShow_timeout"]

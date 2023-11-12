@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://GameLogic.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Ground.tscn" type="PackedScene" id=3]
+[ext_resource path="res://backgroundColorForest.png" type="Texture" id=4]
+[ext_resource path="res://ground.png" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 247.5, 10 )
+
+[node name="Testlevel" type="Node"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 512, 298.5 )
+scale = Vector2( 1, 0.583008 )
+texture = ExtResource( 4 )
+
+[node name="Gamelogic" parent="." instance=ExtResource( 2 )]
+spawn_time = 1.15
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 226, 193 )
+gravity = 1600.0
+jump_strength = 500.0
+
+[node name="Ground" parent="." instance=ExtResource( 3 )]
+z_index = 10
+
+[node name="Sky" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sky"]
+position = Vector2( 247.5, -10 )
+shape = SubResource( 1 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+layer = 0
+scroll_offset = Vector2( 50, 0 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 10, 1 )
+motion_offset = Vector2( 5, 0 )
+motion_mirroring = Vector2( 1, 0 )
+
+[node name="Ground" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 50, 508 )
+texture = ExtResource( 5 )
