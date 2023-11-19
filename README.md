@@ -22,3 +22,5 @@ The shader basically gets a direction, time and speed value to calculate the x a
 
 Exept the backgroud and the Godot head, i created the art by myself.
 For the background art and the sounds i thank kenney(https://www.kenney.nl/) very much for his awesome work to make game assets affordable.
+
+![Screenshot from 2023-11-12 23-21-19](https://github.com/Weigelsan/flappy_bird_cs50/assets/96353859/7761a56c-44b9-4096-ba39-9b688efdd958)
